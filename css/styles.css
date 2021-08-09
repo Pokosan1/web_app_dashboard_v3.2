@@ -10,6 +10,7 @@ body {
 margin: 0 auto;
 padding: 0;
 font-family: 'Lato', sans-serif;
+overflow-x: hidden;
 
 }
 
@@ -497,6 +498,7 @@ input:checked + .slider:after{
 
 
 @media (min-width: 768px) {
+
     .grid-container {
         grid-template-columns: 55px 1fr;
         grid-template-rows: auto;
@@ -686,6 +688,8 @@ input:checked + .slider:after{
 } 
 
 @media (min-width: 1024px) {
+
+ 
     .grid-container {
         grid-template-columns: 75px 1fr;
         grid-template-rows: auto;
