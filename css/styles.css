@@ -10,8 +10,6 @@ body {
 margin: 0 auto;
 padding: 0;
 font-family: 'Lato', sans-serif;
-overflow-x: hidden;
-
 }
 
 .grid-container {
@@ -24,7 +22,6 @@ overflow-x: hidden;
     "header" 
     "nav" 
     "main";
-
 }
 
 img {
@@ -38,8 +35,9 @@ section {
 /* -----FONTS----- */
 
 h1 {
-    font-size: 22px;
-    margin: 10px;
+    font-size: 18px;
+    padding-left: 10px;
+    width: 35%;
     font-weight: lighter;
     color: white;
 }
@@ -60,40 +58,51 @@ h3 {
 
 header {
     grid-area: header;
-}
-
-.header-container {
-    flex-direction: row;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
     background-color: rgb(133, 133, 207);
 }
 
-.bell {
-    width: 8%;
-    margin: 12px;
-    fill: white;
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
 }
 
-.bell:hover {
+.bell svg {
+    fill: white;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin-left: 32px;
+}
+
+.bell svg:hover {
     fill: rgb(57, 57, 99);
 }
 
 .notification-mark {
     position: absolute;
     background-color: rgb(28, 224, 28);
+    border-radius: 50%;
     height: 5px;
     width: 5px;
-    border-radius: 50%;
-    top: 15px;
-    left: 148px;
+    top: 10px;
+    left: 155px;
 }
 
-.profile_image {
-    width: 25%;
-    height: 25%;
-    margin: 10px;
+.user {
+    display: flex;
+}
+.user img {
+    width: 35px;
+    height: auto;
+    padding-left: 0;
+    border-radius: 50%;
 }
 
 .line {
@@ -101,16 +110,14 @@ header {
     height: 40px;
 }
 
-.user {
-    display: flex;
-}
-
-header p {
+.user p {
     font-size: 12px;
     margin: auto 0;
+    padding-right: 14px;
     padding-left: 10px;
     color: white;
-}
+} 
+
 /* -----NAVIGATION----- */
 
 nav {
@@ -353,8 +360,6 @@ textarea:focus {
     color: white;
 }
 
-
-
 input:focus::-webkit-input-placeholder {
     color: transparent;
 }
@@ -449,7 +454,6 @@ input:checked + .slider:before {
 input:checked + .slider:after{
     content: 'ON';
     left: 25%;
-
 }
 
 #timezone {
@@ -505,27 +509,34 @@ input:checked + .slider:after{
         grid-template-areas: "header header header" "nav main main";
     }
 
+    header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-container {
+        width: 36%;
+        overflow: hidden;
+    }
+
     .bell {
-        width: 3%;
-        margin-top: 16px;
-        margin-left: 450px;
+        width: 4%;
+        margin-top: 7px;
+        margin-left: 70px;
     }
     
     .notification-mark {
-        left: 585px;
+        left: 610px;
     }
 
-    .profile_image {
-        width: 16%;
-        height: 16%;
-        margin-top: 14px;
+    .line {
+        margin-left: 25px;
+    }
 
-    } 
-
-    header p {
-        font-size: 12px;
-        padding-left: 20px;
-    } 
+    /* header p {
+        font-size: 13px;
+        padding-right: 30px;
+    }   */
 
 /* -----NAVIGATION----- */
 
@@ -541,10 +552,8 @@ input:checked + .slider:after{
         padding: 10px; 
     }
             
-
 /* -----MAIN----- */
    
-
     main {
         display: grid;
         grid-template-columns: 50%;
@@ -575,7 +584,6 @@ input:checked + .slider:after{
     
     .alert-btn {
         padding-left: 390px;
-     
     }
 
     .traffic, .social-stats-container, .members, .activity {
@@ -594,7 +602,6 @@ input:checked + .slider:after{
         border-top: 1px solid lightgray;
     }
 
-
     .testing  {
     display: flex;
     flex-direction: row;
@@ -607,7 +614,6 @@ input:checked + .slider:after{
         max-height: 85px;
         margin-left: 10px;
     }
-
 
      .social-image {
         max-width: 3.8em;
@@ -632,7 +638,6 @@ input:checked + .slider:after{
     section {
         border-bottom: none;
     }
-
 
    .members-container {
        flex-direction: row;
@@ -668,7 +673,6 @@ input:checked + .slider:after{
 
    .message, .settings {
         grid-column: 1 / span 2;
-
    }
 
    .form-field,
@@ -684,42 +688,37 @@ input:checked + .slider:after{
    .switch-light {
     margin-right: 380px;
     }
- 
 } 
 
 @media (min-width: 1024px) {
 
- 
     .grid-container {
         grid-template-columns: 75px 1fr;
         grid-template-rows: auto;
         grid-template-areas: "header header" "nav main";
     }
 
-    h1 {
-        text-align: left;
-        margin-left: 10px;
+    .header-container {
+        width: 15%;
+        position: relative;
     }
-   
+
+    h1 {
+        font-size: 20px;
+    }
+
     .bell {
-        width: 30px;
-        height: 30px;
-        margin-left: 75em;
+        margin-left: 2px;
     }
     
     .notification-mark {
-        left: 84em;
+        position: absolute;
+        left: 22%;
     }
 
-    .profile_image {
-        width: 16%;
-        height: 15%;
-    } 
-
-    header p {
-        font-size: 16px;
-        margin-right: 5px;
-    } 
+    .user p {
+        font-size: 14px;
+    }
 
     main {
         display: grid;
@@ -794,5 +793,4 @@ input:checked + .slider:after{
     .switch-light {
         margin-right: 350px;
     }
-
 }
