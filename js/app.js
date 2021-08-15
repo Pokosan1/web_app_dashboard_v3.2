@@ -5,7 +5,7 @@ alertBanner.innerHTML =
 <div class="alert-banner">
     <div class="alert">
         <p><strong>Alert: </strong> You have unread messages</p>
-        <p class="alert-btn"-close"> X </p>
+        <button class="alert-btn"-close"> X </button>
     </div>
 </div>
 `

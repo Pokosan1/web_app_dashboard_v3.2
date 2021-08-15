@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+
   </head>
 
   <body>
@@ -23,11 +24,11 @@
                 </svg>
                 <span class="notification-mark"></span>
             </div>    
-            <div class="notifications"></div>
             <div class="line"></div>
             <div class="user">
               <img class="profile_image" src="images/member-1.jpg" alt="profile image of lady">
               <p>Student Name</p>
+            </div>
           </div>
       </header>
 
@@ -106,7 +107,7 @@
             <canvas id="mobile-chart"></canvas>
         </section> 
           
-        <section>
+        <section class="social-section">
           <div class="social-stats-container">
             <h3>SOCIAL STATS</h3> 
             <div class="testing">
@@ -250,23 +251,23 @@
         <section class="settings" id="settings">
           <h3>SETTINGS</h3>
 
-          <div class="toggle-container">
+          <div class="switch-container">
 
-            <div class="toggles">
+            <div class="switch-toggle">
               <p>Send Email Notifications</p>
-              <label class="switch-light" onclick="">
-                <input type="checkbox">
-                <span class="slider"></span>
+              <label class="switch">
+                <input type="checkbox" class="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="switch-toggle">
+              <p>Set Profile to Public</p>
+              <label class="switch">
+                <input type="checkbox" class="checkbox">
+                <span class="slider round"></span>
               </label>
             </div>
 
-            <div class="toggles">
-              <p>Set Profile to Public</p>
-              <label class="switch-light" onclick="">
-                <input type="checkbox">
-                <span class="slider"></span>
-              </label>
-            </div>
           </div>
 
           <div class="dropdown-timezone">
